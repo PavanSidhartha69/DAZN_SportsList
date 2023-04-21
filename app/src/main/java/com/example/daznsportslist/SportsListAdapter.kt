@@ -1,17 +1,14 @@
 package com.example.daznsportslist
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import androidx.recyclerview.widget.RecyclerView.Recycler
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.daznsportslist.databinding.ActivityMainBinding
 import com.example.daznsportslist.databinding.ItemViewBinding
 
-class Adapter_RV(val playerList: List<String>) : Adapter<Adapter_RV.rv_ViewHolder>() {
+class SportsListAdapter(val playerList: List<String>, val context: Context) : Adapter<SportsListAdapter.rv_ViewHolder>() {
     class rv_ViewHolder(val binding: ItemViewBinding?) : RecyclerView.ViewHolder(binding!!.root) {
     }
 
@@ -26,5 +23,10 @@ class Adapter_RV(val playerList: List<String>) : Adapter<Adapter_RV.rv_ViewHolde
 
     override fun onBindViewHolder(holder: rv_ViewHolder, position: Int) {
         holder.binding!!.playerName = playerList[position]
+
+        holder.binding.Goto.setOnClickListener {
+            val intent = Intent(context,Details_page::class.java)
+            context.startActivity(intent)
+        }
     }
 }
