@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="CRICKET FOOTBALL"
         android:textSize="24dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
 
 </LinearLayout>
