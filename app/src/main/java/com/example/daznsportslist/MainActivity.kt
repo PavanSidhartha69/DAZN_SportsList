@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         val randomList : List<String> = listOf("HWLL","ASDAD","gfdgfdg","sdfsfewweffew","asdfsadsadadwqq","SFDDSFDSFsf","AFEEFAFSF","sfdsfdsfdsfds","HWLL","ASDAD","gfdgfdg","sdfsfewweffew","asdfsadsadadwqq","SFDDSFDSFsf","AFEEFAFSF","sfdsfdsfdsfds")
 
         val list = findViewById<RecyclerView>(R.id.playerList)
-        adapter=SportsListAdapter(randomList,this)
+        //adapter=SportsListAdapter(randomList,this)
         list.adapter=adapter
         list.layoutManager= LinearLayoutManager(this)
     }

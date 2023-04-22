@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.daznsportslist.databinding.ItemViewBinding
 
-class SportsListAdapter(val playerList: List<String>, val context: Context) : Adapter<SportsListAdapter.rv_ViewHolder>() {
+class SportsListAdapter(val playerList: List<Tiles>, val context: Context) : Adapter<SportsListAdapter.rv_ViewHolder>() {
     class rv_ViewHolder(val binding: ItemViewBinding?) : RecyclerView.ViewHolder(binding!!.root) {
     }
 
@@ -22,7 +22,7 @@ class SportsListAdapter(val playerList: List<String>, val context: Context) : Ad
     }
 
     override fun onBindViewHolder(holder: rv_ViewHolder, position: Int) {
-        holder.binding!!.playerName = playerList[position]
+        holder.binding!!.playerName = playerList[position].Label
 
         holder.binding.Goto.setOnClickListener {
             val intent = Intent(context,Details_page::class.java)
