@@ -27,7 +27,7 @@ class SportsListAdapter(val playerList: List<Tiles>, val context: Context) :
         Log.i("msg", playerList[position].toString())
         holder.binding!!.playerName = playerList[position].Title
 //        holder.binding!!.playerDescription = playerList[position].Description
-        holder.binding.cardView.setOnClickListener {
+        holder.binding.Goto.setOnClickListener {
             val intent = Intent(context, Details_page::class.java)
             intent.putExtra("Description", playerList[position].Description.toString())
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
