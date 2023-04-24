@@ -4,6 +4,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface SportsListAPI {
-    @GET(value = "5a8dbd14-6eba-4697-9027-56b0b3efd9dc")
+    @GET(value = "fc2a4463-16e1-4a03-acdd-12abe4b8300a")
     fun getData() : Call<SportsData>
 }

@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 val responseBody = response.body()!!
                 listdata = responseBody.Tiles
                 Log.i("LOGGER", listdata.toString())
-                adapter = SportsListAdapter(listdata, applicationContext)
+                adapter = SportsListAdapter(listdata, this@MainActivity)
                 list.adapter = adapter
             }
 
