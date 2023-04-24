@@ -19,28 +19,30 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         app:cardBackgroundColor="@color/cardview_dark_background"
         app:cardCornerRadius="4dp">
 
-    <TextView
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:id="@+id/txtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@{playerName}" />
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="top"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img" />
 
-    <TextView
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:id="@+id/txtDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        android:text="@{playerDescription}" />
+        <TextView
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom"
+            android:text="@{playerName}" />
 
-<!--    <Button-->
+
+        <!--    <Button-->
 <!--        style="@style/TextAppearance.AppCompat.Body1"-->
 <!--        android:id="@+id/Goto"-->
 <!--        android:layout_width="wrap_content"-->
@@ -51,5 +53,14 @@
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:text="Go" />-->
     </androidx.cardview.widget.CardView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtDescription"-->
+<!--        style="@style/TextAppearance.AppCompat.Body1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@{playerDescription}"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="24sp" />-->
 </RelativeLayout>
 </layout>
