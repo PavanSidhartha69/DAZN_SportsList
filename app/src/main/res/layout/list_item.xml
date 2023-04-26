@@ -8,14 +8,18 @@
     android:padding="16dp"
     android:background="@color/black"
     tools:context="com.example.daznsportslist.Details_page">
-
-
+    <TextView
+        android:id="@+id/matchTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"/>
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:srcCompat="@tools:sample/avatars"
-        android:layout_gravity="center"/>
+    android:layout_gravity="center"/>
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
